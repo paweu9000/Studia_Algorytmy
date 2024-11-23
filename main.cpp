@@ -54,7 +54,7 @@ int main()
     }
 
     std::sort(std::begin(all_sequences), std::end(all_sequences), [](const std::vector<int> v1, const std::vector<int> v2) {
-            return !(v1.size() < v2.size());
+            return !(v1.size() <= v2.size());
         }
     );
 
@@ -75,6 +75,8 @@ int main()
         }
         std::cout << std::endl;
     }
+
+    std::cout << "Ilość: " << all_sequences.size() << "\n";
 
     for (auto node : nodes) {
         delete node;
